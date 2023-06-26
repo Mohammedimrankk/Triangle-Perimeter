@@ -1,0 +1,28 @@
+#include<stdio.h>
+int triangle(int a,int b, int c);
+int main(){
+    int a,b,c,p;
+
+    printf("Enter the value for a side of a triangle = ");
+    scanf("%d",&a);
+
+    printf("Enter the value for b side of a triangle = ");
+    scanf("%d",&b);
+
+    printf("Enter the value for c side of a triangle = ");
+    scanf("%d",&c);
+
+    triangle(a,b,c);
+    return 0;
+}
+int triangle(int a,int b,int c){
+    if(a<(b+c) & b<(a+c) & c<(a+b)){
+    printf("Triangle is possible with entered values.\n");
+    int p;
+    p=a+b+c;
+    printf("Perimeter of a triangle = %d",p);
+    }
+    else{
+    printf("Triangle is not possible with given values.");
+    }
+}
